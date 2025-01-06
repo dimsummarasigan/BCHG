@@ -3,9 +3,11 @@
 // ADD THE OBJECT VARIABLE IN THE 2ND PARAMETER
 // THE OBJECT IMGLINK WILL HOLD THE LINK OF THE IMAGE BEING UPLOADED.
 
+// imgDIV is the div that holds all the uploaded images.
+
 
 var ImgurXHR = {
-    uploadImgUr: function (inputID, imgLink) {
+    uploadImgUr: function (inputID, imgDIV) {
         document.getElementById(inputID).addEventListener('change', function (e) {
             var file = e.target.files[0];
             if (!file || !file.type.match(/image.*/))
@@ -18,7 +20,9 @@ var ImgurXHR = {
             xhr.onload = function () {
 
                 if (xhr.status == 200) {
-                    imgLink = JSON.parse(xhr.responseText).data.link;
+                    let temp_img = document.createElement('img');
+                    temp_img.src = JSON.parse(xhr.responseText).data.link;
+                    imgDIV.appendChild(temp_img);
                     // callback(img_file);
                 } else {
                     window.alert('ImgurXHR error: Error in uploading... Please try again');
