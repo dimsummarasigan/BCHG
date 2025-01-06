@@ -26,7 +26,7 @@ var ImgurXHR = {
                     //callback("error in uploading...");
                 }
             }
-            xhr.setRequestHeader('Authorization', 'Client-ID FOO');
+            xhr.setRequestHeader('Authorization', 'Client-ID 33f63d5902f27e5');
             xhr.send(fd);
         }, false);
     }
