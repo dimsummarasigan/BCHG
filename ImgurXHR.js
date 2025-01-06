@@ -18,7 +18,7 @@ var ImgurXHR = {
             xhr.onload = function () {
 
                 if (xhr.status == 200) {
-                    imgLink.img = JSON.parse(xhr.responseText).data.link;
+                    imgLink = JSON.parse(xhr.responseText).data.link;
                     // callback(img_file);
                 } else {
                     window.alert('ImgurXHR error: Error in uploading... Please try again');
