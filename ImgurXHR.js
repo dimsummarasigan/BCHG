@@ -7,7 +7,7 @@
 
 
 var ImgurXHR = {
-    uploadImgUr: function (inputID, imgDIV) {
+    uploadImgUr: function (inputID, imgDIV, callback) {
         document.getElementById(inputID).addEventListener('change', function (e) {
             var file = e.target.files[0];
             if (!file || !file.type.match(/image.*/))
@@ -23,6 +23,7 @@ var ImgurXHR = {
                     let temp_img = document.createElement('img');
                     temp_img.src = JSON.parse(xhr.responseText).data.link;
                     imgDIV.appendChild(temp_img);
+                    callback();
                     // callback(img_file);
                 } else {
                     window.alert('ImgurXHR error: Error in uploading... Please try again');
