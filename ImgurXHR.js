@@ -14,7 +14,7 @@ var ImgurXHR = {
             var fd = new FormData();
             fd.append("image", file); // Append the file
             var xhr = new XMLHttpRequest(); // Create the XHR (Cross-Domain XHR FTW!!!) Thank you sooooo much imgur.com
-            xhr.open("POST", "https://api.imgur.com/3/image.json"); // Boooom!
+            xhr.open("POST", "https://api.imgur.com/3/upload"); // Boooom!
             xhr.onload = function () {
 
                 if (xhr.status == 200) {
