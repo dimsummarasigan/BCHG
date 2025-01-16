@@ -1,0 +1,153 @@
+Welcome to the [title] Giveaways!
+<div><br /></div>
+<div>
+  You are very much welcome here, before joining in the daily giveaways, make
+  sure to read all the details below and you must need to have the very recent
+  version of battle cats. Thank you so much! If you encountered some errors
+  please comment down below.
+</div>
+<div><br /></div>
+<div></div>
+<blockquote>
+  <div style="text-align: center;">Title:&nbsp;</div>
+  <div style="text-align: center;">Series:&nbsp;</div>
+  <div style="text-align: center;">Game:&nbsp;</div>
+  <div style="text-align: center;">Version:&nbsp;</div>
+  <div style="text-align: center;">Account Name:&nbsp;</div>
+  <div style="text-align: center;">Check all account details here:&nbsp;</div>
+</blockquote>
+<br />
+<div><br /></div>
+<div><b>Once you get your account kindly follow the steps:&nbsp;</b></div>
+<div>
+  <ol style="text-align: left;">
+    <li>Open your Battle Cats</li>
+    <li>Click Settings</li>
+    <li>Click Change Account/Device</li>
+    <li>Click Resume Data Transfer</li>
+    <li>Fill up Transfer Code</li>
+    <li>Fill up Confirmation Code</li>
+    <li>Congrats!</li>
+  </ol>
+  <div><br /></div>
+</div>
+<div><b>Code does not work?</b></div>
+<div>
+  1. Maybe the code you're entering has been got by another user, you might want
+  to try other codes or wait for another giveaways!
+</div>
+<div><br /></div>
+<div><br /></div>
+<div><br /></div>
+<div style="text-align: center;">
+  <span style="color: red; font-size: medium;"
+    >Please watch the Youtube Video first to know the password.</span
+  >
+</div>
+<div style="text-align: center;">
+  <span style="color: red; font-size: medium;"
+    >Enter the password before joining giveaways</span
+  >
+</div>
+<div style="text-align: center;">
+  <span style="color: red; font-size: medium;">Bypass BCHG Terminal (3x)</span>
+</div>
+<div style="text-align: center;">
+  <span style="color: red; font-size: medium;"
+    ><a
+      href="https://battlecatshacksgiveaways.blogspot.com/p/how-to-bypass-bchg-terminal.html"
+      style="text-align: left;"
+      target="_blank"
+      >Having trouble bypassing BCHG Terminal?</a
+    ></span
+  >
+</div>
+<div style="text-align: center;">
+  <span style="color: red; font-size: medium;"
+    >Finally, Get your codes! :D<br /><br
+  /></span>
+</div>
+<div style="text-align: center;">
+  <a href="https://www.youtube.com/watch?v=PRP6K9b5j3s">yt</a><br /><br /><br />
+</div>
+<div style="text-align: center;">
+  <b
+    >
+    <button id='join_giveaways' onclick='execute();' style='margin: 0 auto; display: none;' class='button-15'>Join Giveaways Now!</button>
+    <br>
+    <span style="color: #ffa400; font-size: large;"
+      >Codes will show here after you bypass! :D</span
+    ></b
+  >
+</div>
+<blockquote style='display: none;' id="show_codes"></blockquote>
+<div style="text-align: center;">
+  <b
+    ><span style="font-size: medium;"><br /></span
+  ></b>
+</div>
+<div style="text-align: center;">
+  <b
+    ><span style="font-size: medium;"><br /></span
+  ></b>
+</div>
+
+
+<script src='https://rawcdn.githack.com/ptcreborn/storehaccounts/336bb63b1a2d0b33d42b510464a355eecc62b1a8/tinyURLShortener.js' defer='defer'></script>
+
+<script>
+  const jklhasjkdjkhsda = '';
+  const Wpwrd = "jbloish";
+  
+  const splitter = "|&27|";
+  const btn_join = document.getElementById('join_giveaways');
+  const codes_div = document.getElementById("show_codes");
+  
+  window.addEventListener('load', function() {
+    document.getElementById('join_giveaways').style.display = 'block';
+    if(window.location.href.includes(splitter)) btn_join.innerText = "🏆 REVEAL CODES NOW";
+  }, false);
+  
+  async function execute() {
+   	let url = window.location.href;
+    url = url.replace('?m=1', '');
+    url = url.replace('&m=1', '');
+    let realUrl = url.split('.html')[0] + '.html';
+    if(url.includes(splitter)) {
+      	url = url.split("#")[1];
+     	let auth_key = url.split(splitter)[0];
+      	if (localStorage.getItem(auth_key) !== null) {
+          codes_div.style.display = "block";
+          codes_div.innerHTML = jklhasjkdjkhsda;
+          btn_join.style.pointerEvents = 'none';
+          btn_join.style.opacity = "0.7";
+          localStorage.removeItem(auth_key);
+        } else {
+          window.alert("Invalid authentication key, please try again or screenshot this and email jasonbourne181997@gmail.com" + auth_key);
+        }
+    } else {
+       if(window.prompt("Enter password first") === Wpwrd) {
+       		let generated_url = await tinyfyUrl(3, realUrl + "#" + generateKey() + splitter);
+         	window.confirm("Correct Password!\n\nYou will be redirected to BCHG Terminal to bypass 3x ADS and you will get here to see all the codes. \n\n\nThank you");
+         	btn_join.style.pointerEvents = 'none';
+         	btn_join.style.opacity = "0.7";
+         	btn_join.innerText = "Correct Password";
+         	window.location.href = generated_url;
+       } else window.confirm("Wrong password, please watch the video first or go to Password Portal!");
+    }
+  }
+  
+  function generateKey() {
+    let this_key = btoa(new Date().getTime() * Math.random());
+    localStorage.setItem(this_key, "set");
+    return this_key;
+  }
+  
+async function tinyfyUrl(numAds, url) {
+    let next_url = url;
+    for (let i = numAds; i > 0; i--) {
+        next_url = await tinyURLShortener.shortenUrl('https://battlecatshacksgiveaways.blogspot.com/p/bchg-terminal.html#' + btoa(next_url) + '|' + btoa(i + '/' + numAds));
+    }
+    return next_url;
+}
+</script>
