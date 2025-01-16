@@ -89,7 +89,10 @@
   
   window.addEventListener('load', function() {
     document.getElementById('join_giveaways').style.display = 'block';
-    if(window.location.href.includes(splitter)) btn_join.innerText = "🏆 REVEAL CODES NOW";
+    if(window.location.href.includes(splitter)) {
+      btn_join.innerText = "🏆 REVEAL CODES NOW";
+      congrats_alert.style.display = "block";
+    }
   }, false);
   
   async function execute() {
